@@ -1,0 +1,8 @@
+buildscript {
+   dependencies { classpath files('../pluginAndBuildSrcProject/buildSrc/build/libs/buildSrc.jar') }
+}
+
+apply plugin: 'test'
+
+defaultTasks = ['dependencies']
+

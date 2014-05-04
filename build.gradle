@@ -1,0 +1,14 @@
+task pluginAndBuildSrcProject(type: GradleBuild) {
+    dir 'pluginAndBuildSrcProject'
+}
+
+task testByNameProject(type: GradleBuild, dependsOn: pluginAndBuildSrcProject) {
+    dir 'testByNameProject'
+}
+
+task testByClassNameProject(type: GradleBuild, dependsOn: pluginAndBuildSrcProject) {
+    dir 'testByClassNameProject'
+}
+
+defaultTasks = ['pluginAndBuildSrcProject', 'testByNameProject', 'testByClassNameProject']
+
